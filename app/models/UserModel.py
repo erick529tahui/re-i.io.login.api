@@ -7,9 +7,9 @@ class UserModel(BaseModel):
     businessName:str
     website:str
     businessDoTxt: str
-    businessDoRecord: bytearray[1024]
+    businessDoRecord: bytes
     mainChanllengesTxt: str
-    mainChanllengesRecord: bytearray[1024]
+    mainChanllengesRecord: bytes
     email: str
     hashed_password: str
     userId: str

@@ -1,13 +1,17 @@
-import os
 from fastapi import Body, FastAPI
-from Models import UserModel, LoginModel, RegisterUserModel , Token
+from app.api.routes import auth
+
+
+import os
+#from Models import UserModel, LoginModel, RegisterUserModel , Token
 from dotenv import load_dotenv
 from datetime import datetime
+
+
 from fastapi.security import HTTPBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 
-#from typing import optional
 
 
 #CHECK if this will be necessary

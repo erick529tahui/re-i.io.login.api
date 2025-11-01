@@ -21,11 +21,24 @@ class Question:
 #----------------------------------------------------------------
 
 class ReIKnowledgeModel(BaseModel):
-    idKnowledge: int
-    description: str
-    percentage: int = Field(gt=0,lt=100)
-    start_date: datetime
-    end_date: datetime
+
+    def __init__(self,idKnowledge,description,percentage,start_date,end_date):
+        self._idKnowledge = idKnowledge
+        self._description = description
+        self._percentage = percentage
+        self._start_date = start_date
+        self._end_date = end_date
+
+    # _idKnowledge: int
+    # _description: str
+    # _percentage: int = Field(gt=0,lt=100)
+    # _start_date: datetime
+    # _end_date: datetime
+
+    def get_description(self):
+        return self._description
+    
+
 
 class LoadKnowledge(BaseModel):
     idKnowledge: int
